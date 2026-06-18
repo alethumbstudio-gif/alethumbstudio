@@ -160,6 +160,9 @@ font-weight:700;
 
 .hero-image{
 position:relative;
+display:flex;
+align-items:center;
+justify-content:center;
 }
 
 .hero-image::before{
@@ -172,15 +175,10 @@ filter:blur(60px);
 
 .hero-image img{
 width:100%;
-height:500px;
-object-fit:cover;
-object-position:center;
+height:auto;
+display:block;
 border-radius:30px;
-position:relative;
-z-index:1;
-box-shadow:0 0 50px rgba(37,99,235,.4);
 }
-
 .badges{
 display:grid;
 grid-template-columns:repeat(4,1fr);
