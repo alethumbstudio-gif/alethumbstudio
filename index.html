@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AleThumbStudio</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
+body{
+background:linear-gradient(135deg,#000,#001b4d,#003cff);
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+color:white;
+overflow:hidden;
+}
+
+.container{
+text-align:center;
+animation:fadeIn 1.5s ease;
+}
+
+.logo{
+width:220px;
+animation:float 3s infinite ease-in-out;
+}
+
+h1{
+font-size:3rem;
+margin-top:20px;
+}
+
+p{
+margin-top:10px;
+font-size:1.2rem;
+opacity:.9;
+}
+
+.btn{
+display:inline-block;
+margin-top:30px;
+padding:15px 35px;
+background:#0066ff;
+color:white;
+text-decoration:none;
+border-radius:12px;
+font-weight:bold;
+transition:.3s;
+}
+
+.btn:hover{
+transform:scale(1.05);
+}
+
+@keyframes fadeIn{
+from{opacity:0;transform:translateY(40px);}
+to{opacity:1;transform:translateY(0);}
+}
+
+@keyframes float{
+0%,100%{transform:translateY(0);}
+50%{transform:translateY(-12px);}
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<img src="logo.png" class="logo">
+<h1>AleThumbStudio</h1>
+<p>Miniature professionali per YouTube, TikTok e Social</p>
+
+<a href="#" class="btn">
+Guarda i Prezzi
+</a>
+</div>
+
+</body>
+</html>
