@@ -11,44 +11,73 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:Arial,sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
-background:linear-gradient(135deg,#000,#001b4d,#003cff);
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
+background:#050816;
 color:white;
-overflow:hidden;
+overflow-x:hidden;
 }
 
-.container{
+header{
+position:fixed;
+top:0;
+width:100%;
+background:rgba(0,0,0,.6);
+backdrop-filter:blur(10px);
+padding:15px 40px;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
+
+header h2{
+color:#4d8cff;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin-left:20px;
+font-weight:bold;
+}
+
+.hero{
+min-height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
 text-align:center;
-animation:fadeIn 1.5s ease;
+padding:20px;
+background:
+radial-gradient(circle at top,#214cff 0%,transparent 40%),
+#050816;
 }
 
 .logo{
-width:450px;
-animation:float 3s infinite ease-in-out;
+width:280px;
+animation:float 3s ease-in-out infinite;
 }
 
-h1{
+.hero h1{
 font-size:3rem;
 margin-top:20px;
 }
 
-p{
-margin-top:10px;
+.hero p{
+margin-top:15px;
 font-size:1.2rem;
-opacity:.9;
+max-width:700px;
 }
 
 .btn{
 display:inline-block;
-margin-top:30px;
+margin-top:20px;
 padding:15px 35px;
-background:#0066ff;
+background:#2d7cff;
 color:white;
 text-decoration:none;
 border-radius:12px;
@@ -60,9 +89,71 @@ transition:.3s;
 transform:scale(1.05);
 }
 
-@keyframes fadeIn{
-from{opacity:0;transform:translateY(40px);}
-to{opacity:1;transform:translateY(0);}
+section{
+padding:90px 20px;
+max-width:1200px;
+margin:auto;
+}
+
+.title{
+text-align:center;
+font-size:2.2rem;
+margin-bottom:40px;
+}
+
+.cards{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+gap:20px;
+}
+
+.card{
+background:#111827;
+padding:25px;
+border-radius:20px;
+text-align:center;
+}
+
+.price{
+font-size:2rem;
+color:#4d8cff;
+margin:10px 0;
+}
+
+.portfolio{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:20px;
+}
+
+.port{
+height:220px;
+background:#111827;
+border-radius:20px;
+display:flex;
+align-items:center;
+justify-content:center;
+font-size:1.1rem;
+}
+
+.contact{
+text-align:center;
+}
+
+.socials a{
+display:inline-block;
+margin:10px;
+padding:12px 20px;
+background:#111827;
+border-radius:12px;
+color:white;
+text-decoration:none;
+}
+
+footer{
+text-align:center;
+padding:40px;
+opacity:.7;
 }
 
 @keyframes float{
@@ -74,15 +165,139 @@ to{opacity:1;transform:translateY(0);}
 
 <body>
 
-<div class="container">
-<img src="5E12F58E-8096-495F-92AF-308962355136.png" class="logo">
-<h1>AleThumbStudio</h1>
-<p>Miniature professionali per YouTube, TikTok e Social</p>
+<header>
+<h2>AleThumbStudio</h2>
 
-<a href="#" class="btn">
-Guarda i Prezzi
+<nav>
+<a href="#portfolio">Portfolio</a>
+<a href="#prezzi">Prezzi</a>
+<a href="#club">Creator Club</a>
+<a href="#contatti">Contatti</a>
+</nav>
+</header>
+
+<section class="hero">
+
+<img src="IL_NOME_ESATTO_DEL_TUO_LOGO" class="logo">
+
+<h1>Miniature che aumentano i clic</h1>
+
+<p>
+Miniature professionali per YouTube, TikTok e Social.
+Prima miniatura gratuita.
+</p>
+
+<a href="#prezzi" class="btn">
+🎁 Guarda i Prezzi
 </a>
+
+</section>
+
+<section id="portfolio">
+
+<h2 class="title">Portfolio</h2>
+
+<div class="portfolio">
+
+<div class="port">Miniatura Gaming (in arrivo)</div>
+
+<div class="port">Miniatura Calcio (in arrivo)</div>
+
+<div class="port">Miniatura YouTube (in arrivo)</div>
+
 </div>
+
+</section>
+
+<section id="prezzi">
+
+<h2 class="title">Prezzi</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>1 Miniatura</h3>
+<div class="price">5€</div>
+</div>
+
+<div class="card">
+<h3>2 Miniature</h3>
+<div class="price">10€</div>
+</div>
+
+<div class="card">
+<h3>3 Miniature</h3>
+<div class="price">12€</div>
+</div>
+
+<div class="card">
+<h3>6 Miniature</h3>
+<div class="price">24€</div>
+</div>
+
+<div class="card">
+<h3>9 Miniature</h3>
+<div class="price">36€</div>
+</div>
+
+</div>
+
+</section>
+
+<section id="club">
+
+<h2 class="title">Creator Club</h2>
+
+<div class="cards">
+
+<div class="card">
+<h3>Abbonamento</h3>
+<div class="price">2€/mese</div>
+<p>
+1 Miniatura → 4€<br>
+2 Miniature → 8€<br>
+3 Miniature → 9€<br>
+6 Miniature → 18€<br>
+9 Miniature → 27€
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="contatti">
+
+<div class="contact">
+
+<h2 class="title">Contatti</h2>
+
+<p>Email: alethumbstudio@gmail.com</p>
+
+<div class="socials">
+
+<a href="https://www.instagram.com/alethumbstudio" target="_blank">Instagram</a>
+
+<a href="https://www.tiktok.com/@alethumbstudio" target="_blank">TikTok</a>
+
+<a href="https://discord.gg/EAbRvn4Y" target="_blank">Discord</a>
+
+</div>
+
+<a class="btn"
+href="mailto:alethumbstudio@gmail.com">
+Richiedi la tua miniatura gratuita
+</a>
+
+</div>
+
+</section>
+
+<footer>
+
+© AleThumbStudio
+
+</footer>
 
 </body>
 </html>
